@@ -1,0 +1,16 @@
+# Builds de Qt Creator / CMake
+build/
+build-*/
+*.user
+CMakeLists.txt.user*
+.qtcreator/
+
+# Python
+__pycache__/
+.venv/
+
+# VS Code
+.vscode/
+
+# Archivos generados por la simulación
+parte1_simulacion/salida/
