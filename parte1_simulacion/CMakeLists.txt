@@ -4,7 +4,10 @@ project(simulacion LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(simulacion src/main.cpp)
+add_executable(simulacion
+    src/main.cpp
+    src/particle.h src/particle.cpp
+)
 
 include(GNUInstallDirs)
 install(TARGETS simulacion
