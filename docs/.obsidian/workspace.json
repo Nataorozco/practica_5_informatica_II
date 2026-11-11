@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diagrama_clases.md",
+                "file": "planificacion/segunda_clase.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "diagrama_clases"
+              "title": "segunda_clase"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "diagrama_clases.md",
+                "file": "planificacion/segunda_clase.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "diagrama_clases.md",
+                "file": "planificacion/segunda_clase.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "diagrama_clases.md",
+                "file": "planificacion/segunda_clase.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -188,9 +188,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "0bf2e403f2a7cb73",
+  "active": "e38048e23a5fe881",
   "lastOpenFiles": [
     "planificacion/Primera_clase.md",
+    "planificacion/segunda_clase.md",
     "diagrama_clases.md"
   ]
 }

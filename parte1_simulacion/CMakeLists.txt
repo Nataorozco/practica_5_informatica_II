@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(simulacion
     src/main.cpp
     src/particle.h src/particle.cpp
+    src/box.h src/box.cpp
 )
 
 include(GNUInstallDirs)
