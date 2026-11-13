@@ -2,6 +2,7 @@
 #include"particle.h"
 #include<string>
 #include "box.h"
+#include "collision.h"
 
 int main()
 {
@@ -18,5 +19,9 @@ int main()
     }
 
     std::cout << "x = " << p.x() << ", y = " << p.y() << ", vx = " << p.vx() << '\n';
-    return 0;
+    collision c{0.31, collision::PARED, 1, -1, 2.0, 30.0, "izquierda"};
+    std::cout << c.t << ' ' << collision::nombreTipo(c.tipo) << ' '
+              <<c.idA << ' ' << c.idB << ' ' << c.x << c.y << ' '
+              << c.detalle << '\n';
+        return 0;
 }

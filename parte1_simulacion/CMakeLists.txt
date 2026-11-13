@@ -8,6 +8,7 @@ add_executable(simulacion
     src/main.cpp
     src/particle.h src/particle.cpp
     src/box.h src/box.cpp
+    src/collision.h
 )
 
 include(GNUInstallDirs)
