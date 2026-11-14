@@ -3,7 +3,7 @@
 #include <string>
 
 //Registro de colision: cuando, de que tipo, quien y donde.
-struct collision
+struct Collision
 {
     enum Tipo { PARED, OBSTACULO, FUSION };
 

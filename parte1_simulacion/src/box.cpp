@@ -23,7 +23,7 @@ bool Box::rebotar(Particle &p, std::string &pared) const
     // pared derecha  (x = ancho)
     else if (x + r > ancho_) {
         x = 2.0 * (ancho_ - r) -x;
-        vx = -x;
+        vx = -vx;
         pared = "derecha";
         choco = true;
     }

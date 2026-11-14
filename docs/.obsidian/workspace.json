@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "planificacion/tercera_clase.md",
+                "file": "planificacion/Cuarta_clase.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tercera_clase"
+              "title": "Cuarta_clase"
             }
           }
         ]
@@ -190,8 +190,9 @@
   },
   "active": "0bf2e403f2a7cb73",
   "lastOpenFiles": [
-    "planificacion/segunda_clase.md",
     "planificacion/tercera_clase.md",
+    "planificacion/Cuarta_clase.md",
+    "planificacion/segunda_clase.md",
     "planificacion/Primera_clase.md",
     "diagrama_clases.md"
   ]

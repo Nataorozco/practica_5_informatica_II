@@ -3,25 +3,32 @@
 #include<string>
 #include "box.h"
 #include "collision.h"
+#include "simulation.h"
 
-int main()
+int main(int argc, char *argv[])
 {
-    Box caja(100.0, 60.0);
-    // Particle(id, x, y, vx, vy, masa, radio): va hacia la pared izquierda
-    Particle p(1, 5.0, 30.0, -10.0, 0.0, 1.0, 2.0);
+    const std::string carpetaSalida = (argc > 1) ? argv[1] : "salida";
 
-    // 100 pasos de 0.01 s = 1 s de movimiento
-    for (int i = 0; i < 100; ++i){
-        p.mover(0.01);
-        std::string pared;
-    if (caja.rebotar(p, pared))
-            std::cout << "choque con pared " << pared << " en paso " << i + 1 << '\n';
-    }
+    const double dt = 0.01;      //intervalo de tiempo (s)
+    const double tFinal = 30.0; // duracion de la simulacion
 
-    std::cout << "x = " << p.x() << ", y = " << p.y() << ", vx = " << p.vx() << '\n';
-    collision c{0.31, collision::PARED, 1, -1, 2.0, 30.0, "izquierda"};
-    std::cout << c.t << ' ' << collision::nombreTipo(c.tipo) << ' '
-              <<c.idA << ' ' << c.idB << ' ' << c.x << c.y << ' '
-              << c.detalle << '\n';
+    Simulation sim(Box(100.0, 60.0), dt);
+
+    //particle(id, x, y,vx, vy, masa, radio)
+    sim.agregarParticula(Particle(1, 10.0, 10.0, 12.0, 7.0, 1.0, 1.5));
+    sim.agregarParticula(Particle(2, 80.0, 15.0, -10.0, 9.0, 2.0, 2.0));
+    sim.agregarParticula(Particle(3, 30.0, 45.0, 8.0, -11.0, 1.5, 1.8));
+    sim.agregarParticula(Particle(4, 70.0, 50.0, -14.0, -6.0, 0.5, 1.2));
+    sim.agregarParticula(Particle(5, 50.0, 30.0, 6.0, 13.0, 1.0, 1.5));
+
+    const double energiaInicial = sim.energiaTotal();
+    sim.ejecutar(tFinal, carpetaSalida);
+    const double energiaFinal = sim.energiaTotal();
+
+    std::cout << "Simulacion terminada. archivos en: "  << carpetaSalida << '\n'
+              << "Colisiones registradas: "  << sim.eventos().size() << '\n'
+              << "Energia cinetica inicial: "  << energiaInicial << '\n'
+              << "Energia cinetica final: "  << energiaFinal << '\n';
+
         return 0;
 }
